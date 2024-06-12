@@ -1,0 +1,119 @@
+/*
+    div {
+    width: 230px;
+    height: 250px;
+    background-color: palevioletred;
+    margin: 50px auto;
+    padding: 30px 20px;
+    border: 5px dashed wheat;
+}
+*/
+
+/* PADDING
+
+    Perbedaan Margin dan Padding:
+    - padding tidak dapat diberi nilai negatif
+    - padding tidak memiliki nilai auto
+    - padding mempengaruhi ukuran box yang dibuat
+        jadi jika sudah memiliki box dengan lebar dan tinggi tertentu, ukuran box nya bisa berubah.
+
+    Pada contoh diatas, kotak akan berukuran 
+    300x300 + 30 atas bawah + 20 kiri kanan
+
+    Solusi: jika ingin kotak tetap berukuran 300, maka harus diubah ukuran box nya (300)
+
+
+    BORDER
+
+    Cara penulisan border:
+        border: width style color;
+
+    style:
+    - solid
+    - dotted
+    - dashed
+    - double 
+
+    Jika ingin tidak semua sisi yang di border, dapat dituliskan seperti ini:
+        border-left: 5px solid black;
+        border-right: 10px dotted blue;
+
+    Border sama dengan padding -> ia juga menambahkan ukuran elemen
+
+
+    CSS memiliki property khusus, agar kita tidak perlu mengkalkulasi dimensi nya:
+    
+    box-sizing
+
+    -> membuat kita tidak perlu mengkalkulasi ulang  total dari dimensi yang sudah kita buat kalau kita kasih padding dan border. 
+*/
+
+/*
+div {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.satu {
+    width: 570px; /* 600 - (2*10) - (2*5) */
+/*
+    background-color: blanchedalmond;
+    padding: 10px;
+    border: 5px solid firebrick;
+}
+*/
+
+/*
+.dua {
+    width: 520px; /* 600 - (2*30) - (2*10) */
+/*
+    background-color: gainsboro;
+    padding: 30px;
+    border: 10px dotted lightcoral;
+}
+*/
+
+/* Karena dari masing masing div memiliki padding dan border dengan ketebalan tertentu,
+    menjadikan lebar yang telah diatur yang seharusnya (600px) menjadi bertambah, 
+    dan agar tetap 600px, kita harus manual mengkalkulasikan ukuran agar tetap 600px.
+
+    solusi:
+
+    property (box-sizing)
+
+    seperti dibawah ini:
+*/
+
+div {
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu {
+    background-color: blanchedalmond;
+    padding: 10px;
+    border: 5px solid firebrick;
+}
+
+.dua {
+    background-color: gainsboro;
+    padding: 30px;
+    border: 10px dotted lightcoral;
+}
+
+                                            /* CSS RESET */
+
+/* CSSreset-> teknik yang dapat membuat kita mengatur ulang nilai-nilai default dari 
+                elemen-elemen yang ada di HTML, khususnya margin dan padding.
+
+    ketika kita belum memberikan CSS apapun pada elemen, tetapi telah ada jarak pada elemen.
+    Itu dikarenakan banyak elemen HTML yang secara default sudah memiliki margin dan padding sendiri.
+
+
+    SOLUSI:
+    cari di google: copy dari CSS reset (mayerweb)
+
+    kenapa harus di reset?
+    -> supaya kita punya kendali penuh terhadap CSS yang kita buat
+*/

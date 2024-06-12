@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+</head>
+<body>
+
+    <h2 id="tabel">BELAJAR TABEL</h2>
+    <!--
+        Tabel pada HTML untuk menampilkan daata yang tabular, sama seperti jika membuat tabek di ms word atau ms excel.
+        Seperti membuat anggaran biaya, menampilkan skor pada sebuah kompetisi, membuat kalender, dll...
+        Jangan menggunakan tabel untuk membuat layout halaman, terutama setelah belajar mengenai CSS.
+
+        Struktur pada sebuah tabel 
+        baris 1, kolom 1    |   baris 2, kolom 2  => BARIS
+        baris 2, kolom 1    |   baris 2, kolom 2
+            KOLOM
+        
+        * Perpotongan antara baris dan kolom: cell / data
+
+        * Jika memiliki tabel dimana judul dari tiap tiap kolomnaya disebut header.
+        header bisa 2, jika pada tiap tipa kolom juga terdapat judul (header horizontal dan vertikal).
+
+        <table></table>
+
+        1. Tabel Simple
+
+            <table>
+                <tr>                 => table row (untuk membuat baris)
+                    <td>..</td>      => table data
+                </tr>
+                </table>        
+
+            Contoh:
+    -->
+    <h3><p>1. Contoh tabel tanpa border (simple)</p></h3>
+    <!-- Belum ada border karena belum memberikan atribut pada tabel-->
+
+    <table>
+        <tr>
+            <td>baris 1, kolom 1</td>
+            <td>baris 1, kolom 2</td>
+        </tr>
+        <tr>
+            <td>baris 1, kolom 1</td>
+            <td>baris 1, kolom 2</td>
+        </tr>
+    </table>
+
+    <!--
+        2. Tabel Complex
+           -> Digunakan jika datanya sudah banyak dan strukturnya sudah kompleks.
+
+            <table>
+                <thead>                                 => table header
+                    <tr>                                => table row (untuk membuat baris)
+                        <th>...</th>                    => menggunakan table header nya, bukan "td". Sama sama menyimpan data, tapi HTML nya sudah membaca dia sebagai header.
+                    </tr>
+                </thead>                                
+                <tbody>                                 => table body
+                    <tr>
+                        <th></th>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+    -->
+    
+    <h3><p>2. Contoh tabel tanpa border (complex) => dengan 2 sumbu header</p></h3>
+     <!-- Belum ada border karena belum memberikan atribut pada tabel-->
+
+    <table>
+        <thead>                                 
+            <tr>
+                <th></th>                   <!-- HEADER -->
+                <th>Kolom 1</th>            <!-- hEADER -->
+                <th>Kolom 2</th>            <!-- HEADER -->
+            </tr>
+        </thead>                                
+        <tbody>
+            <tr>
+                <th>Baris 1</th>            <!-- HEADER -->
+                <td>Baris 1, Kolom 1</td>
+                <td>Baris 1, Kolom 2</td>
+            </tr>
+            <tr>
+                <th>Baris 2</th>            <!-- HEADER -->
+                <td>Baris 2, Kolom 1</td>
+                <td>Baris 2, Kolom 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--
+        ATRIBUT UNTUK MEMBUAT BORDER PADA TABEL:
+
+        <table></table>
+
+        border          => Untuk menambahkan garis di sekitar cell / menambahkan border (Menggunakan CSS)
+        cellspacing     => Untuk menambah jarak antar cell (Menggunakan CSS)
+        cellpadding     => Untuk memberi luas pada sebuah cell (Menggunakan CSS)
+        colspan         => Untuk menggabungkan 2 buah cell yang horizontal / kolom (marging atau menggabungkan dua buah cell pada tabel)
+        rowspan         => Untuk menggabungkan 2 buah cell yang row / baris (marging atau menggabungkan dua buah cell pada tabel)
+    -->
+
+    <h3><p>3. Contoh tabel dengan border atribut "border" </p></h3>
+
+    <table border="2"> <!-- Seperti terdapat 2 baris / double border, itu karena atribut cellspacing -->
+        <tr>
+            <td>baris 1, kolom 1</td>
+            <td>baris 1, kolom 2</td>
+        </tr>
+        <tr>
+            <td>baris 2, kolom 1</td>
+            <td>baris 2, kolom 2</td>
+        </tr>
+    </table>
+
+    <h3><p>4. Contoh tabel dengan border atribut "border" + "cellspacing"</p></h3>
+
+    <table border="2" cellspacing="0"> <!-- Cellspacing seringkali kita gunakan "0", karena kita tidak ingin ada jarak. Yang ingin kita lihat adalah bordernya saja -->
+        <tr>
+            <td>baris 1, kolom 1</td>
+            <td>baris 1, kolom 2</td>
+        </tr>
+        <tr>
+            <td>baris 2, kolom 1</td>
+            <td>baris 2, kolom 2</td>
+        </tr>
+    </table>
+
+    <h3><p>5. Contoh tabel dengan border atribut "border" + "cellspacing" + "cellpadding" + "colspan"</p></h3>
+
+    <p><strong>BEFORE</strong></p>
+
+    <table border="2" cellspacing="0" cellpadding="5"> <!-- Cellpadding untuk menambah luas pada tiap tiap cells nya -->
+        <tr>                            <!--Baris yang akan digabung-->
+            <td>baris 1, kolom 1</td>
+            <td>baris 1, kolom 2</td>   <!--Kolom yang akan digabung-->
+            <td>baris 1, kolom 3</td>   <!--Kolom yang akan digabung-->
+        </tr>
+        <tr>
+            <td>baris 2, kolom 1</td>
+            <td>baris 2, kolom 2</td>
+            <td>baris 2, kolom 3</td>
+        </tr>
+        <tr>
+            <td>baris 3, kolom 1</td>
+            <td>baris 3, kolom 2</td>
+            <td>baris 3, kolom 3</td>
+        </tr>
+    </table>
+
+    <p><strong>AFTER</strong></p>
+
+    <table border="2" cellspacing="0" cellpadding="5"> <!-- Cellpadding untuk menambah luas pada tiap tiap cells nya -->
+        <tr>                            
+            <td>baris 1, kolom 1</td>
+            <td colspan="2">colspan 2</td>  
+        </tr>
+        <tr>
+            <td>baris 2, kolom 1</td>
+            <td>baris 2, kolom 2</td>
+            <td>baris 2, kolom 3</td>
+        </tr>
+        <tr>
+            <td>baris 3, kolom 1</td>
+            <td>baris 3, kolom 2</td>
+            <td>baris 3, kolom 3</td>
+        </tr>
+    </table>
+
+    <h3><p>6. Contoh tabel dengan border atribut "border" + "cellspacing" + "cellpadding" + "colspan" +"rowspan"</p></h3>
+
+    <p><strong>BEFORE</strong></p>
+
+    <table border="2" cellspacing="0" cellpadding="5"> <!-- Cellpadding untuk menambah luas pada tiap tiap cells nya -->
+        <tr>                            
+            <td>baris 1, kolom 1</td>       <!--DIGABUNGKAN-->
+            <td colspan="2">colspan 2</td>  
+        </tr>
+        <tr>
+            <td>baris 2, kolom 1</td>       <!--DIGABUNGKAN: sisa 2 kolom-->
+            <td>baris 2, kolom 2</td>
+            <td>baris 2, kolom 3</td>
+        </tr>
+        <tr>
+            <td>baris 3, kolom 1</td>       <!--DIGABUNGKAN: sisa 2 kolom-->
+            <td>baris 3, kolom 2</td>
+            <td>baris 3, kolom 3</td>
+        </tr>
+    </table>
+
+    <p><strong>AFTER</strong></p>
+
+    <table border="2" cellspacing="0" cellpadding="5"> <!-- Cellpadding untuk menambah luas pada tiap tiap cells nya -->
+        <tr>                            
+            <td rowspan="3">rowspan 3</td>       
+            <td colspan="2">colspan 2</td>  
+        </tr>
+        <tr>
+            <td>baris 2, kolom 2</td>
+            <td>baris 2, kolom 3</td>
+        </tr>
+        <tr>
+            <td>baris 3, kolom 2</td>
+            <td>baris 3, kolom 3</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2 id="latihan">LATIHAN MANDIRI</h2>
+    <p>BEFORE</p>
+
+    <table border="2" cellspacing="0" cellpadding="20">
+        <tr>
+            <td>1,1</td>
+            <td>1,2</td>
+            <td>1,3</td>
+            <td>1,4</td>
+        </tr>
+        <tr>
+            <td>2,1</td>
+            <td>2,2</td>    <!-- DIGABUNGKAN -->
+            <td>2,3</td>    <!-- DIGABUNGKAN -->
+            <td>2,4</td>
+        </tr>
+        <tr>
+            <td>3,1</td>
+            <td>3,2</td>    <!-- DIGABUNGKAN -->
+            <td>3,3</td>    <!-- DIGABUNGKAN -->
+            <td>3,4</td>
+        </tr>
+        <tr>
+            <td>4,1</td>
+            <td>4,2</td>
+            <td>4,3</td>
+            <td>4,4</td>
+        </tr>
+    </table>
+
+    <p>AFTER</p>
+
+    <table border="2" cellspacing="0" cellpadding="20">
+        <tr>
+            <td>1,1</td>
+            <td>1,2</td>
+            <td>1,3</td>
+            <td>1,4</td>
+        </tr>
+        <tr>
+            <td>2,1</td>
+            <td colspan="2" rowspan="2"></td>
+            <td>2,4</td>
+        </tr>
+        <tr>
+            <td>3,1</td>
+            <td>3,4</td>
+        </tr>
+        <tr>
+            <td>4,1</td>
+            <td>4,2</td>
+            <td>4,3</td>
+            <td>4,4</td>
+        </tr>
+    </table>
+
+    <p><strong>Alhamdulillah</strong></p>
+
+</body>
+</html>

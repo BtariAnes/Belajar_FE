@@ -1,0 +1,24 @@
+body {
+    /*
+    background-color: white;
+    background-image: url(../gambar/pohon.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    */
+
+    background: lightpink url(../gambar/bg2.png) top left no-repeat;
+    /* 
+    rekomendaasi background: subtlepatterns.com
+
+    secara default  gambar backround akan selalu diulang, terhadap sumbu x dan terhadap sumbu y.
+    sehingga halamannya penuh dengan gambar tadi. 
+
+    jika ingin mengulang hanya pada satu sumbu saja, terhadap sumbu x (ke kanan) atau terhadap sumbu y (ke bawah).
+    maka tambahkan property "background-repeat"
+
+    jika meneggunakan property "background-repeat" dengan value "no-repeat"
+    kalian dapat punya akses ke property "background-position"
+    dengan posisi terhadap sumbu y: top/center/buttom
+    dengan posisi terhadap sumbu x: left/center/right
+    */
+}

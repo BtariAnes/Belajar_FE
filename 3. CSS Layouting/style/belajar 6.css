@@ -1,0 +1,120 @@
+.container {
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+/*
+.satu, .dua, .tiga {
+    width: 100px;
+    height: 100px;
+}
+
+.satu {
+    background-color: plum;
+}
+
+
+.dua {
+    background-color: salmon;
+    /*float: left;
+    margin-left: 10px;*/
+    /*: right;
+}
+/* saat ditambahkan float: left; kotak salmon (2) hilang. Sebenarnya itu tidak hilang,
+    tetapi ada di belakangnya.
+    Begitu kita beri properti float, kotak biru (3) yang ada dibawahnya ini menganggap 
+    kotak salmon (2) itu tidak ada. Karena kotak salmon (2) ini sudah keluar dari flow normalnya.
+
+    Ketika diberi float: right; maka ia akan dipaksa untuk berada disebelah kanan elemen pembungkusnya (body).
+*/
+
+/*
+.tiga {
+    background-color: skyblue;
+}
+*/
+
+
+                /* TEKS WRAPPING */
+/*             
+img {
+    float: left;
+    margin: 5px;
+}
+*/
+
+/* bagaimana jika ternyata teks lebih sedikit daripada gambarnya? 
+    -> containernya runtuh lagi, karena dia ga nganggap ada gambar
+
+    clear -> berfungsi  menghentikan / membersihkan float.
+                pastikan ketika kalian menggunakan float, kalau kalian sudah tidak butuh lagi.
+                kalian harus bersihkan atau hentikan float nya.
+        left    -> membersihkan float yang left
+        right   -> membersihkan float yang right
+        both    -> membersihkan float keduanya
+
+    cara menghentikan / membersihkan float:
+    - menggunakan property overflow
+        => menambakan overflow: auto; pada .container (gambar akan dianggap ada lagi, tapi bukan solusi yang tepat tapi ngakalin)
+
+    - menggunakan <div> kosong
+        => pada HTML dimana kalian akan memberhentikan float nya, tambahkan div kosong dengan class (clear) 
+            kemudian di CSS pada class (clear) tambahkan clear: left/right/both);
+
+        Namun, ada yang beranggapan, dengan memberikan div kosong akan membuat code tidak rapi.
+        Karena kalian membuat elemen div ini hanya untuk membersihkan float. Jadi div ini tidak ada maknanya sama sekali.
+
+    - menggunakan teknik micro clearfix
+        => cari di google "micro clearfix - nicolas gallagher" copy script nya lalu paste di CSS nya.
+            kemudian tambahkan pada class dengan kata 'cf' ke elemen yang ingin dibersihkan floatnya
+
+*/
+
+
+                /* IMAGE GALLERY */
+/*
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: aquamarine;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 80px; /* agar tulisannya berada benar benar di tengah kotaknya (berikan tinggi sama dengan tinggi kotak)*/
+    /*font-size: 30px;
+    margin: 2px;
+    float: left;
+}
+
+    /* float: left; agar kotak berjejer ke sebelah kanan.
+        ketika kita beri float, artinya keluar dari flow, sehingga si container nya menganggap 
+        di dalamnya tidak ada kotak.
+    */
+
+
+                /* MULTI-COLUMN LAYOUT */
+/*
+.kiri {
+    width: 150px;
+    height: 500px;
+    background-color: lavender;
+    float: left;
+
+}
+
+.tengah {
+    width: 500px;
+    height: 500px;
+    background-color: lightcyan;
+    float: left;
+}
+
+.kanan {
+    width: 150px;
+    height: 500px;
+    background-color: antiquewhite;
+    float: left;
+}
+*/
+

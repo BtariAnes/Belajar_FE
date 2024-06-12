@@ -1,0 +1,225 @@
+<!--
+    CSS PSEUDO-CLASS
+    -> kelas semu yang dimiliki oleh sebuah elemen HTML, yang membuat kita dapat mendefinisikan style pada
+        "keadaan tertentu" dari elemen tersebut.
+
+        disebut kelas semu karena
+        -> kelasnya ada, tapi aktif hanya pada keadaan tertentu saja.
+
+        Pseudo-class yang berhubungan dengan link:
+        -> sebuah link otomasis warnanya akan berbeda dengan yang lainnya (warnanya biru sendiri).
+            kemudian, setelah di klik link nya maka akan berubah warna menjadi ungu.
+            Itu dikarenakan pseudo-class ini
+
+        1. :link    -> style default pada sebuah link (a yang memiliki href)
+        2. :hover   -> style ketika kursor mouse berada diatas sebuah link / elemen
+        3. :active  -> style ketika sebuah link di-klik (keadaan aktif) -> klik tahan warna jadi merah
+        4. :visited -> style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama)
+
+        Pseudo-class yang berhubungan dengan posisi elemen (1):
+        -> akan aktif ketika elemennya merupakan "child" dari elemen yang lain.
+        seperti:
+            <ul> didalamnya ada <li>
+            -> <li> merupakan child dari <ul>
+            
+            <a> di dalam <li>
+            -> <a> merupakan anak dari <li>
+
+        1. :first-child     -> memilih elemen pertama dari sebuah parent (elemen pembungkusnya)
+        2. :last-child      -> memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)
+        3. :nth-child(n)    -> memilih elemen ke-n dari sebuah parent (elemen pembungkusnya)
+                                n bisa berarti urutan (1), (2), ... atau pola (2n), (3n+1), (4n-1)
+                                atau ganjil dan genap (even and odd)
+
+        
+       Pseudo-class yang berhubungan dengan posisi elemen (2):
+       1. :first-of-type    -> memilih elemen pertama dari sebuah jenis/type tag
+       2. :last-of-type     -> memilih elemen terakhir dari sebuah jenis/type tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <link rel="stylesheet" href="../2. CSS Dasar/style/belajar 6.css">
+</head>
+<body> 
+    <a href="#" class="hello">Belajar pseudo-class</a>
+
+    <ul>
+        <li><a href="#">link 1</a></li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+        <li><a href="#">link 4</a></li>
+        <li><a href="#">link 5</a></li>
+        <li><a href="#">link 6</a></li>
+        <li><a href="#">link 7</a></li>
+        <li><a href="#">link 8</a></li>
+        <li><a href="#">link 9</a></li>
+        <li><a href="#">link 10</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde aliquam ut, accusantium asperiores dolorem labore quod error dolorum atque soluta cupiditate nemo debitis ipsam facere ullam laborum harum nesciunt.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam impedit possimus iste atque labore at rerum, doloribus exercitationem odio soluta inventore error cupiditate ratione eligendi eaque. Impedit, laborum quidem?</p>
+</body>
+</html>
+
+
+<!-- CSS INHERITANCE (PEWARISAN)
+
+    CSS INHERITANCE (PEWARISAN)
+    -> Sebuah elemen mewarisi beberapa nilai dari properti yang dimiliki oleh elemen parent-nya
+
+    properti yang diwariskan:
+    1. color
+    2. font
+    3. letter-spacing
+    4. line-height
+    5. list-style
+    6. text-align
+    7. text-indent
+    8. text-transform
+    9. visibility
+    10. white-space
+
+    jadi kalau misalnya parent memiliki nilai dari properti x, 
+    maka kecenderungannya child nya punya nilai dari properti yang sama 
+
+    contoh kasus:
+    dalam body terdapat h1, a, dan p
+
+    dilakukan styling pada body diberi warna hijau
+    tag a, tidak akan berubah (tetap bewarna biru / default)
+
+    cara agar a juga berubah warna, kita lakukan styling sendiri
+    dengan color: inherit -> yang artinya ia mewarisi apa kata parent  nya
+    jadi dia akan mengikuti kata parent nya (body), sehingga warnanya jadi berubah ikut warna hijau.
+
+-->
+
+<!-- CSS SPECIFICITY
+
+    CSS SPECIFICITY
+    -> Setiap deklarasi CSS (selector) memiliki BERAT yang berbeda. 
+        Berat tersebut menentukan seberapa spesifik sebuah elemen dapat dipilih oleh selector.
+    
+    Contoh kasus:
+
+KASUS SATU
+
+    - HTML:
+
+    <p>lorem</p>
+
+    - CSS:
+
+    p {color: red}
+    p {color: green}
+
+    - HASIL:
+    Paragraf akan bewarna hijau, karena p yang kedua akan menimpa / over ride properti yang pertama.
+    Kalau misalnya kita tuliskan sama selectornya (1 level), maka yang akan diambil adalah selector yang paling terakhir.
+
+
+KASUS DUA
+
+    - HTML:
+
+    <p id="p1">lorem</p>
+
+    - CSS:
+
+    #p1 {color: red}
+    p {color: green}
+
+    HASIL:
+
+    Paragraf akan bewarna merah. Karena #p1 lebih spesifik dari p
+
+    menghitung nilai sppecificity:
+    anggap memiliki 4 digit 0
+    kemudian beri label:
+                inline  id  class   element
+                    0    0   0       0
+    
+    #p1     
+        inline  id  class   element
+        0       1   0       0
+
+        vs
+
+    p
+        inline  id  class   element
+        0       0   0       1
+
+
+    ==> 100 vs 1 (menang #p1) sehingga paragraf menjadi merah.
+
+
+KASUS TIGA
+
+    - HTML:
+
+    <ul id="sarapan">
+        <li class="favorit">Nasi Goreng</li>
+        <li>Mie Goreng</li>
+        <li>Bubur Ayam</li>
+        <li>Nasi Kuning</li>
+    </ul>
+
+    - CSS:
+
+    ul#sarapan li {
+        color: green;
+    }
+
+    .favorit {
+        color: red;
+    }
+
+    - HASIL:
+    Nasi Goreng akan ikut bewarna HIJAU.
+
+    Hitung Specificity:
+    ul#sarpan li
+        inline  id  class   element
+        0       1   0       2
+
+    .favorit
+        inline  id  class   element
+        0       0   1       0
+
+    ==> 102 vs 100 (menang ul#sarpan li) sehingga Nasi Goreng menjadi Hijau
+
+    Lalu bagaimana jika ingin kalimat Nasi Goreng tetap menjadi merah?
+    -> buat elemen yang diinginkan agar menjadi lebih SPESIFIK,
+        dengan menambahkan beban pada elemen tersebut agar semakin BERAT.
+
+        (cari cara agar selectornya tetap menarget elemen yang sama, tetapi bebannya lebih berat)
+
+    kita ubah begini:
+
+    Before:
+    .favorit
+        inline  id  class   element
+        0       0   1       0
+
+    After:
+    ul#sarapan li.favorit
+     
+    -> bacanya: CSS, tolong carikan saya li yang punya kelas favorit, 
+                dan dia ada di dalam ul yang punya id sarapan.
+
+        inline  id  class   element
+        0       1   1       2
+
+    ==> 102 vs 112 (menang ul#sarapan li.favorit) sehingga Nasi Goreng menjadi MERAH
+
+
+
+    REKOMENDASI KALKULATOR SPECIFICITY
+    http://specificity.keegean.st
+-->

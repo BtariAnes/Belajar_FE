@@ -1,0 +1,156 @@
+<!-- CSS Positioning 
+    -> karena akan membuat kalian dapat melakukan tata letak dari elemen-elemen HTML 
+        yang nanti kalian buat sesuai dengan yang kalian inginkan.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Position</title>
+    <style>
+        
+        body {
+            height: 2000px;
+        }
+
+        .container {
+            width: 600px;
+            height: 650px;
+            border: 10px solid darkcyan;
+            position: relative; /* agar kotak hijau (2) berada di dalam container*/
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        .satu {
+            background-color: violet;
+        }
+
+        /*
+        .dua {
+            background-color: aquamarine;
+            margin-left: 50px;
+            margin-top: 50px;
+            
+        }
+        /* setelah diberi margin top ternyata elemen elemen yang dibawahnya ikut tergeser kebawah,
+            begitu juga sebaliknya jika kita geser keatas. itu memang adalah perilaku dari margin.
+
+            Jadi begitu kita beri margin, begitu kita kasih sebuah elemen itu margin, 
+            maka ia akan mempengaruhi elemen disekitarnya.
+
+            Lalu bagaimana cara kita menggeserkan kotaknya, tanpa mempengaruhi elemen di sekitarnya.
+            -> nah ini saatnya kita menggunakan property position.
+
+            Position -> memungkinkan kita menggeserkan sebuah elemen tanpa mempengaruhi elemen disekitarnya.
+
+            value pada property position:
+            1. static    -> (default) ketika kita tidak memberikan property position pada sebuah elemen, 
+                            maka default dari property positionnya adalah static. 
+
+            2. relative  -> 
+                - Ketika kita menggerakkan elemen dengan posisi relative (menggunakan property top, left, buttom and right),
+                    ruang yang ditempati sebelumnya oleh elemen tersebut masih ada.
+                - Ketika kita menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif terhadap posisi semulanya.
+                - Jika kita memberi propery top: 0, dan left: 0; maka elemen tidak berubah posisinya.
+
+            3. absolute  ->
+                - Ketika kita menggunakan elemen dengan posisi absolute (menggunakan property top, left, bottom dan right),
+                    ruang yang ditempati sebelumnya oleh elemen tersebut dianggap tidak ada.
+                - Ketika kita menggerkkan elemen dengan posisi absolute, elemen akan bergerak relatif terhadap posisi elemen parent-nya,
+                    Selama elemen parent-nya memiliki posisi yang juga non-static.
+                - jika kita memberi properti top:0; dan left:0; maka elemen akan berada di ujung kiri atas dari element pareny nya.
+
+                nb: parent disini adalah parent terdekatnya.
+
+            4. fixed     ->
+
+
+
+            CSS Position:
+            - Static adalah nilai default dari tiap-tiap elemen ketika tidak diberi property position.
+            - Menggunakan position selain static (non-static), akan membuat sebuah elemen menjadi seolah-olah
+                berbeda pada dimensi dari elemen lainnya.
+            - Elemen yang diberi position selain static (non-static) dapat menggunakan property top, left, bottom dan right 
+                untuk mengatur posisinya.
+                jadi, elemen tersebut akan maju satu dimensi dan kemudian memiliki akses ke property top. left, bottom, right.
+                Sehingga kita bisa geset elemen ini kemanapun kita mau tanpa mengganggu elemen yang launnya.
+
+            note: biasanya kita jarang banget geser-geser elemen dengan posisi relative.
+                    karena biasanya kita memberikan property relative terhadap sebuah elemen.
+                    itu hanya karena kita ingin elemennya maju satu dimensi saja atau keluar dari elemen flow nya saja.
+                    Karena biasanya yang menggerak gerakkan elemen non-static itu adalah elemen dengan position absolute.
+        */
+         
+        /* 
+        .dua {
+            background-color: aquamarine;
+            position: relative;
+            top: 50px;
+            left: 30px;
+        }
+        /* artinya kita akan menggeser kotak biru kebawah sebesar 50px, 
+        jadi kotak yang berwarna cream dibawahnya tidak ikut bergeser karena kotak biru ini sudah naik satu dimensi. */
+
+        /*
+        .dua {
+            background-color: aquamarine;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* Kotak kream (3) tidak terlihat, karena sembunyi di balik kotak biru (2).
+            jadi kotak biru (2) maju satu dimensi kemudian kotak kream (3) menempati posisi kotak biru sebelumnya.
+
+            Dengan tambahan property top dan left 0, ternyata kotak hijau tidak di pojok kiri si container,
+            malah di pojok kiri windows, itu terjadi karena container dengan kotak hijau (2) berada pada dimensi yang berbeda.
+            kotak hijau (2), berada pada satu dimensi diatasnya, sehingga tidak mengalami perubahan.
+
+            Agar kotak biru (2) berada di pojok container, 
+            yang harus kita lakukan adalah dengan membuat container berada pada dimensi yang sama.
+
+            Nah, disinilah kita membutuhkan bantuan position: relative;
+            karena kita tau, position: relative; itu sama seperti absolute dimana itu membuat elemen keluar dari flow.
+            Jadi, containernya harus kita beri value non-static
+        */
+
+        .dua {
+            background-color: aquamarine;
+            position: fixed;
+            height: 40px;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        /* setelah diberi property position: fixed; 
+        ternyata kotak hijau (2) kembali ke ujung kiri browser (keluar dari container).
+
+        itu karena perilaku pertama dari elemen fixed adalah: 
+        ketika kita menggerakkan elemen tersebut menggunakan top, left, bottom, dan right.
+        maka, ia akan selalu bergerak relative terhadap windows browser ini. 
+        jadi, dia tidak akan memperdulikan elemen parent-nya, meskipun parent-nya non-static.
+
+        kemudian, perilaku kedua adalah ketika kita scroll halamannya, elemen tersebut akan terkunci di posisi itu.
+
+        */
+
+        .tiga {
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <!-- review materi -->
+    <div class="container">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
+    
+</body>
+</html>

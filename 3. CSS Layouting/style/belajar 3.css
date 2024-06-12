@@ -1,0 +1,147 @@
+                                    /* 1. CARA PAKAI */
+
+/*.satu {
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    margin-right: 50px;
+}
+*/
+
+/*
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: sandybrown;
+    margin-top: 50px;
+}
+    /* ketika diberi margin-top tidak terjadi perubahan.
+        karena margin itu tidak saling menambahkan (khusus yang vertikal)
+        jadi margin yang akan diambil adalah margin yang paling besar ukurannya. 
+    */
+
+/*
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: plum;
+}
+*/
+
+
+                                    /* 2. OVERLAPPING MARGIN*/
+
+/*
+div {
+    display: inline-block;
+}
+
+.satu {
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+    margin-right: 30px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: sandybrown;
+    margin-left: 20px;
+}
+
+    /* ketika diberi margin left tetap terjadi perubahan.
+        tidak seperti vertikal, dimana yang dipilih hanya margin yang paling besar.  
+        Sedangkan pada horizontal, akan ditambahkan margin kiri dan kanannya.
+    */
+
+/*
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: plum;
+    margin-left: 30px;
+}
+*/
+
+/* Ada keanehan ketika menggunakan display inline dan inline-block, 
+akan ada jarak antar elemen padahal belum ditambahkan margin.
+
+solusi: menghilangkan spasi (hilangkan enternya yang di HTML)
+*/
+
+
+                                            /* 3. NEGATIVE MARGIN */
+
+                                            /*
+.satu {
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+    margin-bottom: 30px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: sandybrown;
+    margin-top: -50px;
+}
+    /* Ketika diberi margin-top dengan nilai negatif, maka elemen akan naik keatas / berlawanan
+        dan elemen atau kotak dibawahnya juga ikut naik keatas.
+
+        NEgatif margin => akan membuat kotakknya bergerak berlawanan arah.
+    */
+
+/*
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: plum;
+    margin-left: -30px;
+}
+*/
+
+
+                                            /* 4. AUTO*/
+
+/*
+.satu {
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+    margin-left: auto;
+    margin-right: auto;
+}
+    /* Ketika menggunakan nilai auto, harus margin-left dan margin-right, tidak boleh salah satunya.
+        Hasilnya adalah: elemen atau kotaknya akan berada di tengah tengah parent nya.
+    */
+
+
+                                            /* 5. SHORTHAND dan MARGIN */
+
+.satu {
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+    margin: 50px auto 40px; 
+}
+
+    /* property margin, 
+        Jika ditulis dengan satu nilai
+            -> maka hasilnya kanan, kiri, atas, bawah akan sama sebesar nilai yang diberikan.
+
+        Jika doberi 2 buah nilai 
+            -> maka, nilai pertama untuk atas dan bawah, nilai kedua untuk kiri dan kanan.
+                Jadi jika ingin atas bawah 50px dan di tengah. dapat dituliskan::
+                     margin: 50px auto;
+
+        Jika dituliskan 3 buah nilai
+            -> maka, nilai pertama adalah atas, nilai kedua untuk kiri kanan, nilai ketida untuk bawah.
+
+        Jika dituliskan 4 buah nilai
+            -> maka nilai pertama atas, nilai kedua kanan, nilai ketiga bawah, dan nilai keempat kiri (searah jarum jam).   
+    */

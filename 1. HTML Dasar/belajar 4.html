@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+</head>
+<body>
+
+    <p>
+        <h1><b><u>A. BELAJAR HYPERLINK</u></b></h1>
+    </p>
+
+    <!--
+        Link pada HTML menggunakan tag <a></a> (anchor)
+
+        Contoh:
+    -->
+   
+    <h2>1. Tanpa Atribut 'href'</h2>
+    <p>Klik <a>ini</a> untuk dapat melihat profil Betha</p>
+
+    <!--
+        Kata "ini" belum menjadi hyperlink
+        Karena untuk membuat hyperlink memperlukan satu atribut "href" untuk menuliskan sumbernya.
+         <a href=""></a>
+
+        Yang dapat kita tuliskan pada "href" ada beberapa jenis, yaitu:
+        1. External link
+
+            Contoh:
+    -->
+
+    <h2>2. Menggunakan Eksternal Link</h2>
+    <p>Klik <a href="https://instagram.com/btari.anes?igshid=NTc4MTIwNjQ2YQ==">ini</a> untuk dapat melihat profil Betha</p>
+
+    <!--
+        2.  - Internal link (halaman website lain yang ada di halaman domain kita / satu domain dengan website yang kita buat)
+            - relative url (memanggil pada folder yang berbeda)
+                jika ingin memanggil satu folder diatasnya maka tinggal tambahkan. misal, "../belajar4.html"
+
+            Contoh:
+    -->
+    <h2>3.1. Menggunakan Inernal Link</h2>
+    <p>Klik <a href="belajar 2.html">ini</a> untuk dapat melihat profil Betha</p>
+
+    <h2>3.2. Menggunakan Relative URL</h2>
+    <p>Klik <a href="kebutuhan belajar 4/belajar 4.1.html">ini</a> untuk dapat melihat profil Betha</p>
+
+    <!--
+        3. Page anchor (bagian tertentu dari sebuah halaman)
+
+           Contoh:
+    -->
+
+    <h2>4. Menggunakan Page Ancor</h2>
+
+    <ul>
+        <li><a href="#bagian1">Ke Bagian 1</a></li> <!--tanda '#' adalah untuk penanda id-->
+        <li><a href="#bagian2">Ke Bagian 2</a></li>
+        <li><a href="#bagian3">Ke Bagian 3</a></li>
+    </ul>
+
+    <h2 id="bagian1">Bagian 1</h2>
+    <!--Agar ketika diklik 'Ke Bagian 1/2/3, dapat berpindah sesuai bagiannya, maka diberi penanda berupa id-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptates tenetur cupiditate natus aperiam tempora at cumque, nihil tempore autem pariatur odio, deserunt, quasi aspernatur eum officia laboriosam beatae magnam.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fuga vitae voluptate veniam odit quia, deserunt dicta! Autem aspernatur id architecto illo animi cumque adipisci rerum, culpa, provident veritatis dolorum.</p>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h2 id="bagian2">Bagian 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore excepturi cupiditate nihil similique nesciunt hic quibusdam et dolor. Quibusdam placeat quas nobis earum cumque quasi perspiciatis molestiae velit ab repellat.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim sit eos tenetur voluptatum repudiandae sequi odio, et voluptatibus libero fugit eum dolores quod animi architecto nesciunt natus hic nostrum quas.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatum aspernatur magni rem ullam fugiat, accusamus, beatae nam possimus doloribus, saepe at harum ducimus minima facilis similique provident vero repellendus?</p>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    
+    <h2 id="bagian3">Bagian 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero voluptatum deleniti assumenda, quibusdam aperiam odio sunt odit facere maiores molestias? Debitis, incidunt enim possimus rem laudantium facere nobis! Possimus, dolore.</p>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h2>5. Tag Target</h2>
+
+    <!-- 
+        Digunakan untuk agar ketika kita meng klik, hasilnya berada di tab baru
+        
+        <a target=""></a>
+        _self   => untuk membuka link pada halaman yang sama (dafult)
+        _blank  => untuk membuka link di tab baru
+        _parent => - (berhubungan dengan frame)
+        _top    => - (berhubungan dengan frame) 
+
+        Contoh:
+    -->
+
+    <p>Klik <a href="https://instagram.com/btari.anes?igshid=NTc4MTIwNjQ2YQ==" target="_blank">ini</a> untuk dapat melihat profil Betha</p>
+
+
+
+
+</body>
+</html>

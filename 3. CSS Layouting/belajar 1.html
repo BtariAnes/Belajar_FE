@@ -1,0 +1,217 @@
+<!--
+    CSS LAYOUTING
+    (PENGATURAN TATA LETAK MENGGUNAKAN CSS)
+
+    CSS Layouting -> teknik CSS untuk mengatur dan meletakkan / memposisisikan
+                    elemen-elemen HTML yang telah kita buat menggunakan syntax CSS.
+
+    
+
+    BAB 1 DISPLAY
+
+    A. Memahami Property Display Pada CSS
+        <div> & <span>
+
+        tag pada HTML digunakan untuk memberikan 'maksud' / 'arti' pada sebuah konten.
+        (p untuk paragraf, h1 untuk heading utama, dll)
+
+        tag <div> dan <span> tidak memiliki 'arti' apapun, keduanya digunakan untuk
+        mengelompokkan tag-tag HTML dan memberikan informasi terhadap tag-tag tersebut.
+
+        
+        CONTOH:
+
+        <body>
+            <div class="header">
+                <h1> Belajar Display </h1>
+            </div>
+            
+
+            <div class="navigasi">
+                <h2>list:</h2>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+            
+
+            <div class="main">
+                <h2>Deskripsi</h2>
+            <img src="../frontend/images/logo belajar.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quaerat quam, veritatis architecto eos, itaque odio rem earum maiores, a vero! Reiciendis, ipsum dolorum excepturi repudiandae natus iure fugiat beatae.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>animi voluptatum</span> doloremque natus nam autem, atque optio, expedita a soluta consectetur id quibusdam ratione fugiat minima ipsam excepturi magni laborum.</p>
+            </div>
+
+            <div class="copyright">
+                <p class="copyright">Copyright 2015. Web Programming UNPAS</p>
+            </div>
+            </body>
+-->
+
+
+<!--
+    Apa hubungan dari tag div dan span pada display?
+
+    <div></div>
+    <span></span>
+
+    keduanya memiliki property display default
+     <div></div>    => div {
+                                display: block;
+                            }
+
+    <span></span>    => span {
+                                display: inline;
+                                }
+
+    "setiap tag pada HTML berada di dalam sebuah kotak. 
+    Property display pada CSS mengatur perilaku dari kotak tersebut"
+
+    "Setiap tag pada HTML memiliki nilai default untuk property display. Tetapi kita juga dapat
+    mengubah perilaku dari tag tersebut dengan mengganti value-nya"
+
+    Jadi, meskipun tiddak menuliskan di CSS desplay nya apa, itu sudah default.
+    Default nya kalau bukan block ya inline.
+
+    Tapi, kita juga bisa mengubah perilaku dari tag tersebut, dengan mengganti desplay nya.
+    Namun ini tidak disarankan, jadi biarkan saja display nya memiliki value yang default.
+-->
+
+<!--
+     Value dari display:
+    1. inline
+        - Elemen HTML yang secara tidak menambah baris baru ketika dibuat.
+        - Lebar dan tinggi elemennya sebesar konten yang ada di dalamnya.
+        - Kita tidak dapat mengatur tinggi dan lebar dari elemen inline. (kecuali img)
+        - Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal. 
+
+        element inline:
+        b, strong, i, em, a, span, sub, sup, button, input, label, select, textarea, dsb....
+
+    2. inline-block (Dapat digunakan ketika ingin mengubah ukuran tag yang masuknya kategori inline)
+        - Tidak ada elemen yang secara default memiliki properti
+            display: inline-block;
+        - Kita harus ubah secara manual properti tersebut.
+        - Perilaku dasarnya sama dengan elemen inline.
+        - Perbedaannya, elemen inline-block dapat kita atur tinggi dan lebarnya.
+
+    3. block
+        - Elemen HTML yang secara default menambahkan baris baru ketika dibuat
+        - Jika tidak diatur lebarnya, maka lebar default dari elemen block akan mempengaruhi lebar browser / parent nya.
+        - Kita dapat mengatur tinggi dan lebar dari element block.
+        - Di dalam elemen block, kita dapat menyimpan tag dengan elemen inline, inline-block, atau bahkan elemen block lagi.
+
+        element block:
+        h1-h6, p, ol, ul,li, form, hr, div, dll ....
+
+    4. none
+        - Digunakan untuk menghilangkan sebuah elemen
+
+     Mengubah Display
+-->
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                
+                a {
+                    background-color: yellow;
+                     /* 1.2 Lebar dan tinggi default sesuai dengan kontennya */
+
+                     /*
+                     width: 20px;
+                     height: 200px;
+                     */
+
+                     /* 
+                        1.3 Lebar dan tingginya tetap sebasar kontennya. KECUALI img 
+                        jika ingin ingin mengubah ukuran tag yang masuknya kategori inline, dapat gunakan INLINE-BLOCK.
+                     */
+
+                     width: 100px;
+                     height: 100px;
+                     display: inline-block;
+                     
+                     /*2. dapat diatur tinggi dan lebarnya, dengan display: inline-block*/
+                }
+                
+
+                /*
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+                */
+            
+                h1 {
+                    background-color: cornsilk;
+                    /*3.2 Ketika diberi background, maka akan memenuhi semua tempatnya (browser)*/
+                }
+
+                .main {
+                    width: 600px;
+                    background-color: wheat;
+                }
+                    /* 3.3 lebar menjadi 600 */
+
+                .main h2 {
+                    background-color: sandybrown; 
+                    /* 3.4 h2 Memenuhi container main*/
+                }
+
+                img {
+                    display: none;
+                }
+                /* 4. img hilang dari halaman web nya*/
+               
+                .navigasi li {
+                    display: inline;
+                }
+                    /* Mengubah Desplay: dari yang block menjadi inline */
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1> Belajar Display </h1>
+            </div>
+            
+
+            <div class="navigasi">
+                <h2>list:</h2>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Ini adalah link 3</a>
+                <!-- 1.1 Ketika menambahkan a maka akan disamping, bukan dibawah (block)-->
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+            
+
+            <div class="main">
+                <h2>Deskripsi</h2>
+                <h2>Deskripsi</h2>
+                <!-- 3.1 h1 akan berada di bawahnya, bukan disamping -->
+
+            <img src="../frontend/images/logo belajar.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quaerat quam, veritatis architecto eos, itaque odio rem earum maiores, a vero! Reiciendis, ipsum dolorum excepturi repudiandae natus iure fugiat beatae.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>animi voluptatum</span> doloremque natus nam autem, atque optio, expedita a soluta consectetur id quibusdam ratione fugiat minima ipsam excepturi magni laborum.</p>
+            </div>
+
+            <div class="copyright">
+                <p class="copyright">Copyright 2015. Web Programming UNPAS</p>
+            </div>
+             
+             <h3></h3>
+        </body>
+        </html>

@@ -1,0 +1,16 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: lightgrey url(../gambar/logo\ belajar.png) center center no-repeat;
+    
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+a :link{
+    color: darkolivegreen ;
+}

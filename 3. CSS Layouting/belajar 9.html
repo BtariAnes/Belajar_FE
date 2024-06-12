@@ -1,0 +1,93 @@
+<!--
+    z-index
+    -> digunakan untuk mengatur tumpukan dari elemen ketika kita beri elemennya non static.
+    jadi, ketika elemennya non-static kita dapat gunakan z-index ini.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Z-Index</title>
+    <style>
+
+        /*
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .satu {
+            background-color: chocolate;
+        }
+
+        .dua {
+            background-color: lightskyblue;
+            top: 100px;
+            left: 100px;
+        }
+
+        .tiga {
+            background-color: rebeccapurple;
+            top: 200px;
+            left: 200px;
+        }
+
+        /* mengapa kotak ungu menjadi paling diatas?
+            -> karena ketika kita buka HTML nya, kita tuliskan paling akhir atau paling bawah, 
+                sehingga ia menjadi yang paling depan. itu adalah perilaku default dari elemen HTML yang kita punya.
+
+                jadi, jika kita ingin kotak coklat (1) atau kotak biru (2), berada di depan.
+                maka, kita harus memindahkan HTML nya ke yang paling akhir.
+
+                itu akan sangat merepotkan, jadi kita dapat menggunakan z-index
+        */
+
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .satu {
+            background-color: chocolate;
+            z-index: 1;
+        }
+        /* z-index: kita dapat memberinya nilai angka, 
+        semakin besar angkanya maka elemennya akan berada semakin depan/maju.
+        Jadi, jika kita ingin menempatkan suatu elemen ke yang paling depan, 
+        kita dapat tuliskan:
+         z-index: 9999;
+        
+         jika ingin menempatkan suatu elemen ke yang paling belakang, 
+        kita dapat tuliskan:
+         z-index: -9999;
+
+        z-index, dimana sumbu x adalah horizontal, sumbu y adalah vertikal.
+        nah, sumbu z adalah 3D, seolah olah tembus keluar dari monitor.
+         */
+
+        .dua {
+            background-color: lightskyblue;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        .tiga {
+            background-color: rebeccapurple;
+            top: 200px;
+            left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+
+</body>
+</html>

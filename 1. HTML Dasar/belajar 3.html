@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Heading dan List</title>
+</head>
+<body>
+    <p>
+        <h1 id="heading"><b><u>A. BELAJAR HEADING</u></b></h1>
+    </p>
+   
+    <h1>Heading 1</h1> <!--Heading paling besar (LEBIH PENTING)-->
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6> <!--Heading paling kecil-->
+
+    <p>==============================</p>
+    <p>Contoh Penggunaan:</p>
+    <h1>JUDUL ARTIKEL</h1>
+        <p>Isi Artikel</p>
+    <h2>SUB JUDUL</h2>
+        <p>Isi Sub Judul Artikel</p>
+
+    <hr>
+   
+    <p>
+        <h1 id="list"><b><u>B. BELAJAR LIST</u></b></h1>
+    </p>
+
+    <!--
+        Jenis - Jenis Tag List:
+
+        1. PERTAMA
+        <ol></ol>   => Membuat list terurut
+                        Dibuat dengan memperhatikan urutan dari item yang ada di dalamnya.
+                        Jadi, apabila itemnya tertukar posisi, maka makna dari list ini berubah.
+
+                        <ol>
+                            <li>item 1</li>
+                            <li>item 2</li>
+                            ...
+                        </ol>
+                        
+                        Default nya, urutannya adalah berbentuk angka.
+
+                        Contoh:
+    -->
+
+    <p>1. Menggunakan tag "ol"</p>
+
+    <h3>To Do List</h3>
+    <ol> <!--Didalam nya harus ada tag <li></li>-->
+        <li>Solat tahajud</li>
+        <li>Belajar</li>
+        <li>Bersih-bersih</li>
+    </ol>
+
+    <p>=======================================================</p>
+
+    <!--
+                        Apabila ingin mengubah urutan ini (tidak menggunakan angka, misal huruf a,b,c). Dapat menggunakan atribut type:
+                        <ol type=""></ol>
+                        1   => default (angka)
+                        A   => Abjad Kapital
+                        a   => Abjad Kecil
+                        I   => Romawi besar
+                        i   => Romawi Kecil
+
+                        Contoh:
+    -->
+    <h3>To Do List (menggunakan atribut type 'A' abjad kapital)</h3>
+    <ol type="A"> 
+        <li>Solat tahajud</li>
+        <li>Belajar</li>
+        <li>Bersih-bersih</li>
+    </ol>
+
+    <p>=======================================================</p>
+
+    <h3>To Do List (menggunakan atribut type 'i' romawi kecil)</h3>
+    <ol type="i"> 
+        <li>Solat tahajud</li>
+        <li>Belajar</li>
+        <li>Bersih-bersih</li>
+    </ol>
+    <hr>
+
+    <!--
+        2. KEDUA
+        <ul></ul>   => Membuat list tidak terurut
+                        Urutan dari list itemnya itu tidak berpengaruh (mau melakukan yang mana dulu, bebas)
+
+                        <ul>
+                            <li>item 1</li>
+                            <li>item 2</li>
+                            ...
+                        </ul>
+
+                        Default nya, urutannya adalah berbentuk dots.
+
+                        COntoh:
+    -->
+
+    <p>2. Menggunakan tag "ul"</p>
+
+    <h3>List Pekerjaan Rumah</h3>
+    <ul> <!--Didalam nya harus ada tag <li></li>-->
+        <li>Menyapu</li>
+        <li>Cuci piring</li>
+        <li>Cuci baju</li>
+        <li>Memasak</li>
+    </ul>
+
+<!--
+                        Apabila ingin mengubah urutan ini (tidak menggunakan dots). Dapat menggunakan atribut type:
+                        <ul type=""></ul>
+                        disc    => Default
+                        square  => kotak 
+                        circle  => lingkaran (tidak penuh)
+
+                        Contoh:
+-->
+    <p>=======================================================</p>
+
+    <h3>List Pekerjaan Rumah (menggunakan atribut type 'square' kotak)</h3>
+        <ul type="square"> 
+            <li>Menyapu</li>
+            <li>Cuci piring</li>
+            <li>Cuci baju</li>
+            <li>Memasak</li>
+        </ul>
+
+    <p>=======================================================</p>
+
+    <h3>List Pekerjaan Rumah (menggunakan atribut type 'circle' lingkaran tidak pebuh)</h3>
+        <ul type="circle"> 
+            <li>Menyapu</li>
+            <li>Cuci piring</li>
+            <li>Cuci baju</li>
+            <li>Memasak</li>
+        </ul>
+        <hr>
+
+    <!--
+        3. KETIGA
+        <dl></dl>   => Membuat daftar terminalogi dan definisi/deskripsi
+                        Jadi isinya itu BERPASANGAN, jadi apabila memiliki 3 term maka harus memiliki 3 description juga.
+
+                        <dl>
+                            <dt>term 1<dt>
+                                <dd>deskription 1</dd>
+                            <dt>term 2</dt>
+                                <dd>deskription 2</dd>
+                            ...
+                            </dl>
+
+                        Contoh:
+    -->
+
+    <p>3. Menggunakan tag "dl"</p>
+
+    <h3>List Location Betha</h3>
+        <dl>
+            <dt><strong>Sabtu - Kamis</strong></dt>
+                <dd>Betha berada di Sragen, rajin membersihkan rumah, belajar, dan mengerjakan skripsi</dd>
+            <dt><strong>Jumat</strong></dt>
+                <dd>Betha berada di Jogja, untuk melaksanakan kuliah digipreneurship</dd>
+        </dl>
+    
+</body>
+</html>

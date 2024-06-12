@@ -1,0 +1,81 @@
+<!-- TEORI PENEMPATAN CSS
+     
+         PENEMPATAN CSS
+
+         Ada beberapa cara menempatkan CSS pada HTML kita,
+          Jadi kita bisa menyompan di halaman yang sama 
+          atau kita buat file sendiri (file terpisah dengan ekstensi file nya CSS, nanti kita hubungkan antara file HTML dan file CSS nya).
+
+        Berikut beberapa cara yang dapat kita lakukan:
+        1. embed                                      
+            <style></style>
+
+         => kita dapat simpan di file yang sama, kita simpan di bagian Head HTML nya.
+
+       2. inline
+            <p style="color: lightblue;">...</p>
+
+         => Kita dapat lakukan di dalam file yang sama, tapi kita gunakan atribut dari HTML yang bernama "style".
+         CSS kita sisipkan langsung di elemen HTML yang mau kita ubah style nya.
+
+         Penggunaan inline ini tidak disarankan, karena kita kembali lagi sama saja seperti saat belajar HTML.
+         dan, jangan campurkan antara style dengan konten, gunakan inline CSS hanya ketika kalian tau apa yang kalian lakukan!
+
+       3. external
+            <link rel="stykesheet" href="style.css"
+
+         => Kita buat file CSS sendiri, terpisah dengan HTML nya. Nanti kita hubungkan file CSS dan HTML menggunakan tag HTML "link"
+
+-->
+
+
+<!-- CONTOH 1. EMBED
+    ==============================================================================================================================================================
+-->
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penempatan CSS</title>
+    <style>
+        body { font-family: arial; }
+        h1 { color: lightblue; }
+        p {
+            line-height: 1.6em;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Penempatan CSS "Embed"</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore delectus saepe quibusdam unde quas recusandae ducimus! Explicabo accusamus obcaecati distinctio, aliquid saepe illum illo sit reprehenderit error quibusdam, odio soluta.</p>
+</body>
+</html>
+
+
+
+<!-- CONTOH 2. INLINE 
+    ==============================================================================================================================================================
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penempatan CSS</title>
+</head>
+<body>
+    <h1 style="color: lightblue; font-family: arial;">Contoh Penempatan CSS "Inline"</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum labore sapiente totam minima tempore repellendus, tempora aspernatur quam, dolorum odit possimus laudantium hic maxime. Voluptas autem fugit nesciunt quo voluptatibus.</p>
+</body>
+</html>
+-->
+
+

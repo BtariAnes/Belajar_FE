@@ -1,0 +1,135 @@
+<!-- TEORI FONT STYLING
+
+    FONT STYLING
+
+    CSS memisahkan antara font dengan teks, 
+    ada saatnya kita memberi style pada font, CSS juga punya property terkait dengan teks.
+
+    bedanya, font -> terkait dengan tulisannya / typeface nya
+    teks -> terkait dengan property pendukung
+
+    * Property yang dimiliki oleh CSS terkait dengan font:
+        - font-family   -> mengatur jenis font yang akan digunakan
+
+                            valuenya ada 2: nama font, generic family
+                            contoh:
+
+                            body {
+                                font-family: arial, verdana, sans-sarif;
+                            }
+
+                            => seluruh tulisan yang ada di body akan berubah menjadi arial.
+                            bisa diberikan lebih dari 1 value terhadap font-family.
+
+                            arial dan verdana   : nama font
+                            sans-sarif          : generic family
+
+                            -> artinya, jika memiliki lebih dari 1 value
+                            font yang pertama akan dicari adalah arial,
+                            jadi ketika user membuka website nya, dia akan mengecek pada sistem operasinya ada tidak font arial?
+                            jika tidak ada, dia cek ke value sebelahnya / verdana,
+                            jika tidak ada, mengecek ke generic font nya / sans-sarif. sans-sarif itu adalah type font yang tidak memiliki kaki.
+
+        - font-size     -> mengatur ukuran font
+                            valuenya ada 3: px, %, em
+
+        - font-weight   -> mengatur ketebalan font
+                            valuenya: lighter, normal, 100-900, bold, bolder.
+
+        - font-variant  -> mengubah font menjadi small caps
+                            valuenya: normal, small-caps
+
+                            artimya -> semuanya akan berubah menjadi huruf kapital,
+                            yang tadinya huruf berukuran besar, akan lebih besar daripada yang lain
+                            yang tadinya huruf berukuran kecil, akan berubah menjadi huruf kapital  
+
+        - font-style    -> mengubah font menjadi bercetak miring
+                            valuenya: normal, italic, oblique
+                            
+                            italic dan obliq, dua duanya membuat font menjadi miring.
+
+                            ketika kita memberikan italic, itu artinya kita mengganti type font nya menjadi font yang italic 
+                            (jika typefacenya atau family nya memiliki font yang italic).
+
+                            gini ginii:
+                            kalau misalnya kalian mengubah sebuah font menjadi bold atau italic,
+                            ada 2 hal yang kemungkinan terjadi:
+                            - jika font nya memang memiliki jenis font italic, maka ia akan mengganti yang tadinya normal/regular menajadi italic (ditukar).
+                            - jika di keluaarga font tersebut tidak ada jenis font italic, maka akan terjadi adalah proses obliq (sistem operasi memaksa font nya menjadi miring).
+
+        - line-height   -> mengatur spasi antar baris (paragraf)
+                            valuenya: normal, px, em
+
+        - shorthand / singkatan -> tidak perlu menuliskan saru persatu baris, 
+                                    yang tadinya butuh enam baris, cukup digantikan dengan satu property "font".
+
+                                    contoh:
+                                    body{
+                                        font: italic normal bold 16px/18px helvetica, arial, sans-sarif;
+                                    }
+
+                                    menuliskannya harus urut:
+                                    - font-style    : italic (opsional)
+                                    - font-variant  : normal (opsional)
+                                    - font-weight   : bold (opsional)
+                                    - font-size     : 16px (wajib)
+                                    - font-height   : 18px (opsional)
+                                    - font-family   : helvetica, arial, sans-sarif (wajib)
+                            
+-->
+
+
+<!-- TEORI TEXT STYLING
+
+    property yang ada di text:
+    - color             => memberikan warna pada tulisan
+
+                            - nama warna: red, lightseagreen, royalblue, ...
+                            - hexadecimal: #f0000, #20b2aa, #4169el, ...
+                                -> bilangan yang terendahnya 0 (6 digit) dan yang tertingginya adalah f (6 digit).
+                                jadi jika kita tuliskan 0 (6 digit), maka warnanya akan hitam, dan jika f (6 digit) bewarna putih.
+                            - rgb: rgb(255,0,0), rgb(32,178, 170), rgb(65,105,225), ...
+
+    - text-align        => mengatur format paragraf / text (rata kiri/tengah/kanan/kiri kanan)
+
+                            left    : rata kiri
+                            right   : rata kanan
+                            center  : rata tengah
+                            justify : rata kiri kanan
+
+    - text indent       => memberi indentasi pada paragraf / text
+                            px dan %
+
+    - text-decoration   => mengatur dekorasi pada teks (underline/tulisan yang tercoret)
+                            none        : -
+                            underline   : garis bawah
+                            overline    : garis atas
+                            line-through: garis melewati tulisannya (seperti mencoret)
+
+    - text-transform    => mengubah jenis font menjadi huruf besar / kecil / kapital (kata pertama) semua
+                            none
+                            lowercase
+                            uppercase
+                            capitalize
+
+    - letter-spacing    => mengatur spasi antar huruf (tingkat kerapatan dan kerenggangan antar huruf)
+                            normal dan px
+
+    - word-spacing      => mengatur spasi antar kata
+                            normal dan px
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font dan Text Styling</title>
+    <link rel="stylesheet" href="../2. CSS Dasar/style/belajar 3.css">
+</head>
+<body>
+    <h1>Belajar Font Style</h1>
+
+    <p>Lorem ipsum dolor sit amet <a href="">consectetur</a> , adipisicing elit. Quam quo voluptas tempora ab, nihil asperiores illo inventore odio et omnis doloribus, repudiandae molestias. Voluptas quasi quaerat sequi iure libero sed.</p>
+</body>
+</html>

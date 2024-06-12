@@ -1,0 +1,80 @@
+
+    <!--
+        PENDAHULUAN
+
+        CSS => Cascanding Style Sheet
+                Untuk memberikan style (warna, ukuran posisi, dll kepada elemen HTML) pada halaman tersebut.
+
+            => Mekanisme sederhana yang mengatur gaya / syle pada halaman web.
+
+            - Aturan yang digunakan untuk menempatkan elemen / tag HTML.
+                HTML -> untuk menyajikan konten
+                CSS -> untuk mengatur bagaimana konten tadi akan ditampilkan
+
+            - Dibuat terpisah degan HTML
+
+            - Bertujuan untuk memisahkan konten dan style 
+
+            - 1 CSS dapat digunakan untuk banyak halaman HTML (teknik cascading)
+
+            - 1 halaman HTML dapat terlihat berbeda jika menggunakan CSS yang berbeda pula (teknik cascading)
+
+
+        ============================================================================================================================
+       
+        ANATOMI CSS
+
+        selector { property: value; }
+
+        contoh:
+        h1 { color: blue; }
+
+        artinya: CSS, pilih seluruh elemen h1, lalu ubah teks didalamnya menjadi bewarna biru.
+
+        jika memiliki lebih dari 1 properti:
+        dapat dituliskan disebealah kanan setelah titik koma
+        atau dapat dituliskan kebawah
+
+        contoh:
+        h1 {
+            font-fdmily: "Courier New";
+            text-align: center;
+            font size: 30px;
+            color: blue;
+        }
+
+        1. selector:
+            - Digunakan untuk memilih dan memanipulasi elemen spesifik pada HTML.
+            - Elemen HTML dipilih berdasarkan tag, id, class bahkan pola / pattern.
+            - Semakin komples struktur HTML, selector juga bisa semakin kompleks / spesifik.
+
+
+        2. property dan value:
+            - ada 350++
+            - https://css-trick.com/almanac 
+
+
+         ============================================================================================================================
+        
+         PENEMPATAN CSS
+
+         Ada beberapa cara menempatkan CSS pada HTML kita,
+          Jadi kita bisa menyimpan di halaman yang sama 
+          atau kita buat file sendiri (file terpisah dengan ekstensi file nya CSS, nanti kita hubungkan antara file HTML dan file CSS nya).
+
+        Berikut beberapa cara yang dapat kita lakukan:
+        - embed                                      
+            <style></style>
+
+         => kita dapat simpan di file yang sama, kita simpan di bagian Head HTML nya.
+
+       - inline
+            <p style="color: lightblue;">...</p>
+
+         => Kita dapat lakukan di dalam file yang sama, tapi kita gunakan atribut dari HTML yang bernama "style".
+
+       - external
+            <link rel="stykesheet" href="style.css"
+
+         => Kita buat file CSS sendiri, terpisah dengan HTML nya. Nanti kita hubungkan file CSS dan HTML menggunakan tag HTML "link"
+            

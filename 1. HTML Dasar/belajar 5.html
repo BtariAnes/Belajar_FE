@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar</title>
+</head>
+<body>
+    <!--
+        Bagaimana menyimpan sebuah gambar ke dalam document HTML kita?
+
+        <img src="">
+
+        file gambar yang dapat kita simpan ada 2, yaitu:
+
+        1. Internal resource (gambar yang kita miliki sendiri)
+            logo.png, background.jpg, ...
+
+        2. external resource (hotlink) => tidak disarankan
+            Gambar yang digunakan dari website lain, tidak disarankan karena
+                - jika kita menggunakan gambar dari  website lain, artinya pada saat user membuka website kita dan gambarnya tampil.
+                    itu yang digunakan adalah bendwidth dari pemilik websitenya. bukan bendwith kita.
+                - tekadang saat mengambil gambar dari website lain, belum nentu websitenya bebas pakai / memiliki copywrite.
+                - artinya kita bergantung ke website yang lain, sehingga kalau website yang lain tersebut down atau tidak dapat diakses.
+                    itu berpengaruh pada website kita, gambarnya juga tidak akan muncul.
+
+        Atribut yang dimiliki oleh <img> adalah:
+
+        src     => Gambarnya mau diambil darimana
+        alt     => Memberikan alternatif teks pada gambar
+                    jika tidak bermasalah pada gambarnya, maka gambar akan muncul.
+                    tetapi, jika ada masalah pada gambar spt salah menuliskan nama file atau gambarnya rusak, maka yang akan muncul adalah kata pada atribut "alt"
+        title   => Memberikan judul pada gambar (judul akan terlihat, ketika kursor mengarah pada gambar)
+        width   => Mengatur lebar dari gambar 
+        height  => Mengatur tinggi dari gambar
+
+        * width dan height dapat ditulis salah satu atau juga dapat dua duanya.
+
+        Jika ditulis salah satu, contoh:
+            menulis width nya saja, maka height nya akan berubah otomatis menyesuaikan proporsi gambarnya.
+        
+        Jika ditulis dua duanya, ada kemungkinan gambarnya ketarik.  
+
+        * untuk menuliskan width dan height, kita bisa menuliskan 2 nilai, yaitu:
+        px  => jika kita menuliskan angka saja, berarti ukurannya berbentuk pixel
+        %   => ukurannya relative terhadap halamannya
+                misalnya: 50% => berarti setengah dari halamannya
+        contoh:
+    -->
+
+    <img src="../frontend/images/logo belajar.png" alt="WebBelajar" width="400" title="Gambar untuk Belajar">
+
+        
+    <h3><p>1. Contoh jika terjadi kesalahan penulisan nama file:</p></h3>
+
+    <img src="../frontend/images/logo belajar.pn" alt="WebBelajar">
+    
+    <p>==============================================================================================================</p>
+
+    <h3><p>2. Contoh jika menggunakan atribut width dan height (keduanya)</p></h3>
+
+    <img src="../frontend/images/logo belajar.png" alt="WebBelajar" width="200" height="400">
+    
+    <p>==============================================================================================================</p>
+
+    <h3><p>3. COntoh jika gambar menggunakan ukuran berupa %</p></h3>
+
+    <img src="../frontend/images/logo belajar.png" alt="WebBelajar" width="50%">
+        <!--
+            artinya:
+            Ukurannya akan 50% dari halamannya, walaupun kita resize browsernya (minimize).
+            maka gambarnya akan selalu berusaha sebesar 50% atau setengah dari halamannya.
+        -->
+    
+    <p>==============================================================================================================</p>
+
+    <h3><p>4. Menggabungkan image + hyperlink</p></h3>
+
+    <a href="https://instagram.com/btari.anes?igshid=NTc4MTIwNjQ2YQ==">
+        <img src="../frontend/images/logo belajar.png" title="Gambar untuk Belajar">
+    </a>
+    <!--
+        contohnya: membuat link ketika mengklik sebuah image
+    -->
+
+</body>
+</html>

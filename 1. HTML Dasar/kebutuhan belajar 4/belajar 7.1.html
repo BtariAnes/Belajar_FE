@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Mandiri Form</title>
+</head>
+<body>
+    <h2>LATIHAN MANDIRI</h2>
+
+    <table border="0" cellspacing="0" cellpadding="5">
+        <tr>
+            <td><label for="depan">Nama Depan: </label></td>
+            <td> <input type="text" id="depan"></td>
+            <td><label for="belakang">Nama Belakang: </label></td>
+            <td> <input type="text" id="belakang"></td>
+        </tr>
+
+        <tr>
+            <td><label for="password">Kata Sandi: </label></td>
+            <td><input type="password" id="password"></td>
+        </tr>
+
+        <tr>
+            <td> <label for="">Jenis Kelamin: </label></td>
+            <td>
+                <input type="radio" id="pria" name="jeniskelamin">
+                <label for="pria">Laki - Laki</label>
+            </td>
+            <td>
+                <input type="radio" id="wanita" name="jeniskelamin">
+                <label for="wanita">Perempuan</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td> <label for="">Kegemaran: </label></td>
+            <td>
+                <input type="checkbox" id="reading">
+                <label for="reading">Membaca</label>
+            </td>
+            <td>
+                <input type="checkbox" id="dancing">
+                <label for="dancing">Menari</label>
+            </td>
+            <td>
+                <input type="checkbox" id="sleep">
+                <label for="sleep">Tidur</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="description">Deskripsi Diri: </label></td>
+            <td colspan="3"><textarea name="" id="description" cols="60" rows="5"></textarea></td>
+        </tr>
+
+        <tr>
+            <td><label for="">Tempat Tinggal: </label></td>
+            <td>
+                <select>
+                    <option>Yogyakarta</option>
+                    <option>Bandung</option>
+                    <option>Bali</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4"><button type="submit">Kirim</button></td>
+        </tr>
+    </table>
+</body>
+</html>

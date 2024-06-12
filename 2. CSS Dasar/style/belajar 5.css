@@ -1,0 +1,100 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* 
+    pada CSS jika memiliki 2 buah elemen yang ingin diberikan style yang sama
+    tidak perlu menuliskan satu persatu selector dan property nya 
+    jadi cukup menuliskan satu property (lakukan grouping) dengan separator koma
+    koma tersebut diartikan sebagai dan 
+
+    contoh:
+*/
+
+h1, h2 {
+    color: darkkhaki;
+}
+
+h2{
+    font-style: italic;
+}
+
+ol{
+    color: crimson;
+}
+/*  
+    tidak berubah: karena yang berubah adalah "a" yang di dalamnya, bukan "ol"
+
+    cara untuk "a" didalam "ul" bewarna orange dan "a" didalam "ol" bewarna merah,
+    caranya dengan memberikan separator "spasi" yang artinya di dalam, bukan koma.
+
+    contoh:
+*/
+
+ul li a {
+    color: orange;
+}
+
+/*
+    dibaca -> CSS tolong tuliskan saya tag "a" yang ada di dalam "li" yang di "ul" 
+*/
+
+ol li a {
+    color: red;
+}
+
+/*
+    memiliki property yang sama: dapat digunakan koma
+    jika lebih spesifik: dapat gunakan spasi
+
+    berikut untuk styling paragraf, dengan paragraf satu bewarna ... dan paragraf dua bewarna ....
+    agar styling berbeda, buat selector sendiri (selector khusus: id dan class)
+    untuk memanggil id: tambahkan #
+    untuk memanggil class: gunakan .
+
+    contoh:
+*/
+
+#p1 {
+    color:darkolivegreen
+}
+
+.p2 {
+    color: darksalmon
+}
+
+/*
+    perbedaan id dan class:
+
+    1. id
+        - sebuah elemen HTML hanya boleh memiliki 1 id
+        - setiap halaman hanya boleh memiliki 1 elemen dengan id tersebut
+            contoh: kita sudah gunakan "p1" untuk paragraf, tidak boleh ada elemen lain yang namanya "p1" juga.
+        - dapat digunakan sebagai penanda halaman untuk link
+        - digunakan juga untuk JavaScript
+        - sebaiknya tidak digunakan untuk CSS (lebih baik gunakan class)
+            karena menggunakan id itu bebannya lebih berat
+            dapat diilustrasikan:
+                mengguankan elemen HTMl itu bebeannya 1
+                menggunakan class bebannya 10x lebih berat
+                menggunakan id bebannya 100x lebih berat (tidak disarankan)
+*/
+
+.cetak-tebal {
+    font-weight: bold;
+}
+
+p.cetak-tebal {
+    font-size: 30px;
+}
+
+/*  
+    dibaca: CSS tolong carikan saya paragraf, tapi yang memiliki class "cetak-teebal"
+    jadi, selain paragraf, itu tidak akan terkena class "cetak-tebal"
+*/
+
+
+
+
+

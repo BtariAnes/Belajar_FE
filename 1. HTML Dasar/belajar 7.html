@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!--
+        Form =>> sebuah ellement pada HTML yang diguanakn untuk mengelola data dari input yang dilakukan oleh user.
+                baik itu saat user mengisikan data pada kolom, memilih sesuatu pada combo box atau drop down menu, atau memilih radio botton,
+                atau sampai si user menekan sebuah tombol.
+
+        <form>
+            ...
+            - elemen form -
+            ...
+        </form>
+
+        * elemen pada form:
+        A. input       => Paling Penting, bisa bikin teks field, radio button, combobox, dll...
+                            User dapat menginputkan sesuatu 
+                            Hanya berupa kolom saja
+
+        B. textarea    => Mirip seperti teks field, tetapi lebih banyak yang bisa kita isikan.
+                            Biasanya kita isikan komentar, pesan pada fb atau email, dll.
+
+        C. select      => Membuat dropdown atau combo box
+        D. button      => Tombol untuk mengirimkan data nya, melakukan hal spesifik
+        E. label       => Menandai sebuah elemen input
+    -->
+
+    <!--
+        1. Elemen Input
+
+        <input type="">         => tag tidak memiliki penutup, jadi tidak berpasangan.
+
+        text        => Untuk teks field
+        password    => Password
+        radio       => Radio button
+        checkbox    => Check box
+        submit      => Tombol tidak digunakan menggunakan input
+        reset       => Tombol tidak digunakan menggunakan input
+        button      => Tombol tidak digunakan menggunakan input
+
+        Contohh:
+    -->
+
+    <h1><u>A. ELEMEN INPUT</u></h1>
+    <h3><p>1. Elemen Input "text"</p></h3>
+
+    <!--TEXT-->
+    <form>
+        <label for="username">Nama: </label>    <!-- akan memberitahu html bahwa saya akan membuat label -->
+        <input type="text" id="username">       <!-- "id" harus sama dengan "for" -->
+
+    
+
+        <!-- 
+            Kelebihan menggunakan label adalah kalian dapat mengisikan inputnya dengan mengklik kotaknya.
+            tapi selain itu, kalian kalau mau mengisi bisa klik labelmnya. Jika klik labelnya, artinya juga mengaktifkan teks field nya.
+
+            Sangat disarankan menggunaakn label, lalu pasangkan menggunakan "for" di labelnya dan "id" di inputnya.
+        -->
+
+    </form>
+
+<P>===========================================================================================================</P>
+    
+    <h3><p>2. Elemen Input "text" + "Password"</p></h3>
+
+    
+    <form>
+    
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+    
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <!--
+            Yang harus sama adalah "id" dengan "for"
+
+            Perbedaan "text" dan "password":
+            -> Kalau password, kita tuliskan sesuatu itu otomatis akan disembunykan 
+            sama si browser dan sama si HTML disembunykan menjadi titik-titik.
+        -->
+    </form>
+
+<P>===========================================================================================================</P>
+    
+    <h3><p>3. Elemen Input "text" + "Password" + "Radio"</p></h3>
+
+    <form>
+
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <br>
+
+    <!-- RADIO -->
+        <label for="">Jenis Kelamin: </label>
+
+        <input type="radio" id="pria" name="jeniskelamin">
+        <label for="pria">Laki - Laki</label>
+
+        <input type="radio" id="wanita" name="jeniskelamin">
+        <label for="wanita">Perempuan</label>
+        
+        <!--
+            radio button dapat di klik semua, karena kurang menambahkan 1 atribut untuk menandakan 2 buah radio button ini adalah satu grup.
+
+            tanpa atribut name, radio button dapat di pilih semua .
+
+            dengan atribut name, kita memberitahu si HTML bahwa ini saya mau bikin radio button.
+            ada 2 pilihannya, dua duanya jenis kelamin. tapi yang satu laki-laki dan yang satu perempuan.
+        -->
+    </form>
+
+<P>===========================================================================================================</P>
+
+    <h3><p>4. Elemen Input "text" + "Password" + "Radio" + "Checkbox</p></h3>
+    <!-- Dapat memilih lebih dari satu pilihan -->
+
+    <form>
+
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+    
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <br>
+
+    <!-- RADIO -->
+        <label for="">Jenis Kelamin: </label>   
+        <input type="radio" id="pria" name="jeniskelamin">
+        <label for="pria">Laki - Laki</label>
+
+        <input type="radio" id="wanita" name="jeniskelamin">
+        <label for="wanita">Perempuan</label>
+
+        <br>
+
+    <!-- CHECKBOX -->
+        <label for="">Kegemaran: </label>
+
+        <input type="checkbox" id="reading">
+        <label for="reading">Membaca</label>
+
+        <input type="checkbox" id="dancing">
+        <label for="dancing">Menari</label>
+
+        <input type="checkbox" id="sleep">
+        <label for="sleep">Tidur</label>
+
+    </form>
+
+<P>===========================================================================================================</P>
+    
+    <h3><p>5.1 Elemen Input "text" + "Password" + "Radio" + "Checkbox" + "Submit"</p></h3>
+
+    <form>
+
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <br>
+
+    <!-- RADIO -->
+        <label for="">Jenis Kelamin: </label>
+
+        <input type="radio" id="pria" name="jeniskelamin">
+        <label for="pria">Laki - Laki</label>
+
+        <input type="radio" id="wanita" name="jeniskelamin">
+        <label for="wanita">Perempuan</label>
+
+        <br>
+
+    <!-- CHECKBOX -->
+        <label for="">Kegemaran: </label>
+
+        <input type="checkbox" id="reading">
+        <label for="reading">Membaca</label>
+
+        <input type="checkbox" id="dancing">
+        <label for="dancing">Menari</label>
+
+        <input type="checkbox" id="sleep">
+        <label for="sleep">Tidur</label>
+
+        <br>
+
+    <!-- SUBMIT -->
+        <input type="submit" value="Kirim">     <!-- untuk mengganti tulisannya, dapat tambahkan atribut value -->          
+
+    <!-- 
+        Untuk tombol alamat inputnya ada 3: 
+        - submit (mengirimkan data)
+        - reset (menghapus semua data)
+        - button (untuk memberi fungsi spesifik terhadap sebuah button)
+
+        Tidak disarankan untuk menggunakan tag input ini, karena tombol sebenarkan bukan elemen input
+        Gunakan elemen berikut:
+
+        <button type=""></button>
+
+        - submit
+        - reset
+        - button
+    -->
+    </form>
+
+<P>===========================================================================================================</P>
+    
+    <h3><p>5.2 Elemen Input "text" + "Password" + "Radio" + "Checkbox" + Elemen Button</p></h3>
+
+    <form>
+
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <br>
+
+    <!-- RADIO -->
+        <label for="">Jenis Kelamin: </label>
+
+        <input type="radio" id="pria" name="jeniskelamin">
+        <label for="pria">Laki - Laki</label>
+
+        <input type="radio" id="wanita" name="jeniskelamin">
+        <label for="wanita">Perempuan</label>
+
+        <br>
+
+    <!-- CHECKBOX -->
+        <label for="">Kegemaran: </label>
+
+        <input type="checkbox" id="reading">
+        <label for="reading">Membaca</label>
+
+        <input type="checkbox" id="dancing">
+        <label for="dancing">Menari</label>
+
+        <input type="checkbox" id="sleep">
+        <label for="sleep">Tidur</label>
+
+        <br>
+
+    <!-- ELEMEN SUBMIT -->
+        <button type="submit">Kirim</button>
+
+    </form>
+
+<br>
+<hr>
+
+    <h1><u>B. ELEMEN TEXTAREA</u></h1>
+
+    <!--
+            textarea mirip dengan textfield
+                namun, ukurannya lebih besar dan  tulisan yang bisa kita simpan di dalam teksarea ini lebih banyak.
+                dapat digunakan untuk menuliskan artikel, review, komentar, dll...
+        -->
+
+    <h3><p>6. Elemen Input + Elemen Submit + Elemen Textarea</p></h3>
+
+    <form>
+
+    <!-- TEXT -->
+        <label for="username">Nama: </label>    
+        <input type="text" id="username"> 
+
+        <br>
+
+    <!-- PASSWORD -->
+        <label for="password">Kata Sandi: </label>
+        <input type="password" id="password">
+
+        <br>
+
+    <!-- RADIO -->
+        <label for="">Jenis Kelamin: </label>
+
+        <input type="radio" id="pria" name="jeniskelamin">
+        <label for="pria">Laki - Laki</label>
+
+        <input type="radio" id="wanita" name="jeniskelamin">
+        <label for="wanita">Perempuan</label>
+
+        <br>
+
+    <!-- CHECKBOX -->
+        <label for="">Kegemaran: </label>
+
+        <input type="checkbox" id="reading">
+        <label for="reading">Membaca</label>
+
+        <input type="checkbox" id="dancing">
+        <label for="dancing">Menari</label>
+
+        <input type="checkbox" id="sleep">
+        <label for="sleep">Tidur</label>
+
+        <br>
+
+    <!-- ELEMEN TEXTAREA -->
+        <label for="description">Deskripsi Diri: </label>
+        <textarea name="" id="description" cols="20" rows="5"></textarea>
+
+        <br>
+
+    <!-- ELEMEN SUBMIT -->
+        <button type="submit">Kirim</button>
+
+    </form>
+
+<br>
+<hr>
+
+    <h1><u>C. ELEMEN SELECT</u></h1> 
+    
+     <!--
+        dropdown atau dalam HTML kita sebut "select"
+        biasanya digunakan untuk kota kelahiran, dll...
+
+            <select>
+                <option> opsi 1 </option>
+                <option> opsi 1 </option>
+                <option> opsi 1 </option>
+                ...
+            <select>
+        -->
+
+    <h3><p>7. Elemen Input + Elemen Submit + Elemen Textarea + Elemen Select</p></h3>
+
+        <form>
+
+        <!-- TEXT -->
+            <label for="username">Nama: </label>    
+            <input type="text" id="username"> 
+
+            <br>
+
+        <!-- PASSWORD -->
+            <label for="password">Kata Sandi: </label>
+            <input type="password" id="password">
+
+            <br>
+
+        <!-- RADIO -->
+            
+            <label for="">Jenis Kelamin: </label>
+
+            <input type="radio" id="pria" name="jeniskelamin">
+            <label for="pria">Laki - Laki</label>
+
+            <input type="radio" id="wanita" name="jeniskelamin">
+            <label for="wanita">Perempuan</label>
+
+            <br>
+
+        <!-- CHECKBOX -->
+            <label for="">Kegemaran: </label>
+
+            <input type="checkbox" id="reading">
+            <label for="reading">Membaca</label>
+
+            <input type="checkbox" id="dancing">
+            <label for="dancing">Menari</label>
+
+            <input type="checkbox" id="sleep">
+            <label for="sleep">Tidur</label>
+
+            <br>
+
+        <!-- ELEMEN TEXTAREA -->
+            <label for="description">Deskripsi Diri: </label>
+            <textarea name="" id="description" cols="20" rows="5"></textarea>
+
+            <br>
+
+        <!-- ELEMEN SELECT -->
+            <label for="">Tempat Tinggal: </label>
+
+            <select>
+                <option>Yogyakarta</option>
+                <option>Bandung</option>
+                <option>Bali</option>
+            </select>
+
+            <br>
+
+        <!-- ELEMEN SUBMIT -->
+            <button type="submit">Kirim</button>
+       
+        </form>
+<br>
+<hr>
+
+</body>
+</html>

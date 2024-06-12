@@ -1,0 +1,39 @@
+.hello:link {
+    color: brown;
+}
+
+.hello:hover {
+    color: greenyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.hello:active {
+    font-style: italic;
+}
+
+.hello:visited {
+    color: goldenrod;
+}
+
+li:first-child a {
+    color: aquamarine;
+}
+/* bacanya: CSS, carikan saya a yang ada di dalam li yang merupakan anak pertama */
+
+li:last-child a {
+    color: antiquewhite;
+}
+
+li:nth-child(3n+1) a {
+    color: powderblue;
+}
+/*jika menggunakan nth-child, akan mentarget anak spesifik urutan keberapa (tulis di dalam krung) */
+
+li:nth-child(3n+1) a:hover {
+    color: beige;
+}
+
+p:last-of-type {
+    color: cornflowerblue;
+}

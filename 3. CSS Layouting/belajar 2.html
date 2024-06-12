@@ -1,0 +1,71 @@
+<!--
+    width & height
+
+    satuannya:
+    - px (absolute)
+    - % (relative thd parent)
+    - in, cm, mm, pt, pc (dunia nyata)
+
+
+    CSS Overflow
+    -> properti CSS yang akan mengatur perilaku elemen yang keluar dari parent nya.
+    Value dari property overflow:
+    - visible   -> default, jika ada konten yang keluar maka konten akan diperlihatkan
+    - auto      -> CSS otomatis menambahkan scroll ketika konten sudah tidak cukup
+    - hidden    -> kontennya akan disembunyikan
+    - scroll    -> mirip auto, tetapi jika kontennya cukup, scroll nya tetap ada.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensi dan Overflow</title>
+    <style>
+        .satu {
+            width: 200px;
+            height: 200px;
+            background-color: rosybrown;
+        }
+
+        .dua {
+            width: 120%;
+            background-color: seashell;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">
+        <div class="dua">Hello World</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero quo quod autem reprehenderit maiores inventore, necessitatibus ullam laborum, numquam sit eveniet totam est atque fugit ut minima minus mollitia!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officia incidunt suscipit laboriosam aspernatur! Laboriosam recusandae veniam, possimus fuga ullam dolores corrupti cupiditate est veritatis eligendi laudantium. Ipsum, iste soluta.
+    </p>
+</body>
+</html>
+
+<!--
+    CSS Box Model
+
+    - setiap elemen di halaman berada di dalam sebuah box (kotek).
+    - kita dapat mengatur ukuran dan posisi kotak tersebut.
+    - kita dapat memberi warna / gambar sebagai background kotak tersebut.
+
+    CSS box model mendefinisikan 'kotak' yang dihasilkan oleh sebuah elemen,
+    lalu menampilan sesuai dengan format visualnya.
+
+    CSS box model terdiri dari margin, border, padding, dan content.
+    - margin    -> area transparan di sekitar kotak (diluar border)
+    - padding   -> area transparan di dalam kotak (antara content dan border)
+    - border    -> batas disekeliling content dan padding
+    - content   -> konten sebenarnya di dalam box, bida berupa text atau gambar
+-->
